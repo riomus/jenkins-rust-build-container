@@ -1,7 +1,7 @@
 FROM evarga/jenkins-slave
 
 RUN   apt-get -yqq update && apt-get install -y --force-yes \
-      build-essential cmake git curl vim strace gdb libssl-dev wget&& \
+      build-essential cmake git curl vim strace gdb libssl-dev wget libpcre3-dev&& \
       apt-get autoremove -y && apt-get clean
 
 RUN echo 'root:rust' | chpasswd
